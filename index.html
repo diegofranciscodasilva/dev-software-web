@@ -11,7 +11,23 @@
         content="Dev Software Web, criação de sites, landing pages, presença digital, reformulação de Instagram, reformulação de Facebook, posts para redes sociais, carrosséis, Reels, marketing digital, desenvolvimento web, design responsivo">
     <meta name="author"
         content="Diego Francisco da Silva - Desenvolvedor Front-End e criador da Dev Software Web. Especialista em criação de sites, landing pages e presença digital para pequenos negócios.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://diegofranciscodasilva.github.io/dev-software-web/">
+    <meta property="og:title" content="Dev Software Web | Sites e Presença Digital">
+    <meta property="og:description"
+        content="Dev Software Web - Sites, landing pages e presença digital para pequenos negócios. Criação de sites, reformulação de Instagram e Facebook, posts, carrosséis e Reels.">
+
+    <meta property="og:image"
+        content="https://diegofranciscodasilva.github.io/dev-software-web/assets/images/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Capa do portfólio de Diego Silva">
+
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="shortcut icon" href="./assets/images/dev-software-web-shortcut.png" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -21,7 +37,7 @@
 <body>
 
     <!-- ========= HEADER ========= -->
-    <header class="header" id="inicio">
+    <header class="header">
         <div class="container header__content">
             <div class="header__brand">
                 <span class="header__logo-icon"><i class="fa-solid fa-code"></i></span>
@@ -40,10 +56,6 @@
             </nav>
 
             <div class="header__actions">
-                <button class="btn-icon" id="theme-toggle" aria-label="Alternar tema">
-                    <i class="fa-regular fa-moon" id="theme-icon"></i>
-                </button>
-
                 <a href="#projetos" class="btn btn--ghost header__btn-portfolio">
                     Ver portfólio
                 </a>
@@ -52,7 +64,8 @@
                     Solicitar orçamento
                 </a>
 
-                <button class="btn-icon header__menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <button class="btn-icon header__menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu"
+                    aria-expanded="false">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -60,14 +73,14 @@
     </header>
 
     <!-- ========= HERO ========= -->
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="container hero__content">
             <div class="hero__text">
                 <p class="hero__eyebrow">Performance Digital</p>
                 <h1 class="hero__title">
-                    Sites e presença digital
+                    Sites e Presença Digital
                     <br>
-                    <span>para negócios que querem crescer</span>
+                    <span>Para Negócios Que Querem Crescer</span>
                 </h1>
                 <p class="hero__subtitle">
                     A Dev Software Web cria sites profissionais, landing pages e conteúdos para redes sociais,
@@ -86,20 +99,23 @@
             </div>
 
             <div class="hero__visual">
-                <div class="hero-card">
-                    <div class="hero-card__header">
-                        <span class="hero-card__dot hero-card__dot--red"></span>
-                        <span class="hero-card__dot hero-card__dot--yellow"></span>
-                        <span class="hero-card__dot hero-card__dot--green"></span>
-                        <span class="hero-card__title">index.html</span>
-                    </div>
-                    <pre class="hero-card__code">
-<section class="hero">
-  <h1>Dev Software Web</h1>
-  <p>Sites e presença digital para negócios</p>
-  <a href="#orcamento">Solicitar orçamento</a>
-</section>
-          </pre>
+                <div class="code-window" aria-label="Exemplo de código HTML">
+                    <p><span class="code-tag">&lt;html&gt;</span></p>
+                    <p class="code-indent-1"><span class="code-tag">&lt;head&gt;</span></p>
+                    <p class="code-indent-2"><span class="code-tag">&lt;title&gt;</span><span
+                            class="code-text">Performance Digital</span><span class="code-tag">&lt;/title&gt;</span></p>
+                    <p class="code-indent-1"><span class="code-tag">&lt;/head&gt;</span></p>
+                    <p class="code-indent-1"><span class="code-tag">&lt;body&gt;</span></p>
+                    <p class="code-indent-2"><span class="code-tag">&lt;main </span><span
+                            class="code-attribute">class</span><span class="code-text">=&#34;</span><span
+                            class="code-success">growth</span><span class="code-text">&#34;</span><span
+                            class="code-tag">&gt;</span></p>
+                    <p class="code-indent-3"><span class="code-tag">&lt;h1&gt;</span><span class="code-text">Resultados
+                            Reais</span><span class="code-tag">&lt;/h1&gt;</span></p>
+                    <p class="code-indent-2"><span class="code-tag">&lt;/main&gt;</span></p>
+                    <p class="code-indent-1"><span class="code-tag">&lt;/body&gt;</span></p>
+                    <p><span class="code-tag">&lt;/html&gt;</span></p>
+                    <span class="code-caret" aria-hidden="true"></span>
                 </div>
             </div>
         </div>
@@ -154,7 +170,7 @@
                     </div>
                     <h3 class="service-card__title">Reformulação de Facebook</h3>
                     <p class="service-card__text">
-                        Otimização da Página, capa profissional, informações atualizadas e botão de contato configurado.
+                        Otimização da página, capa profissional, informações atualizadas e botão de contato configurado.
                     </p>
                 </article>
 
@@ -294,49 +310,70 @@
                 <div class="grid grid--2cols projects-grid">
                     <article class="card project-card">
                         <div class="project-card__thumb project-card__thumb--placeholder">
-                            <i class="fa-solid fa-image"></i>
+                            <img src="./assets/images/innovate.png" alt="Imagem do projeto Innovate"
+                                class="project-card__image">
                         </div>
                         <div class="project-card__body">
-                            <h4 class="project-card__title">Landing Page Saúde</h4>
+                            <h4 class="project-card__title">Innovate</h4>
                             <p class="project-card__text">
-                                Design focado em conversão para clínicas e profissionais da saúde.
+                                Empresa IA - design inovador, responsiva e com foco na experiência do
+                                usuário.
                             </p>
-                            <a href="#" class="project-card__link">Ver projeto &rarr;</a>
+                            <a href="https://diegofranciscodasilva.github.io/empresa_IA-site/" target="_blank"
+                                rel="noopener" class="project-card__link">Link projeto &rarr;</a>
+                            <a href="#contato" class="project-card__link">Solicitar projeto semelhante &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card project-card">
+                        <div class="project-card__thumb project-card__thumb--placeholder">
+                            <img src="./assets/images/constru-max.png" alt="Imagem do projeto Construmax"
+                                class="project-card__image">
+                        </div>
+                        <div class="project-card__body">
+                            <h4 class="project-card__title">Construmax</h4>
+                            <p class="project-card__text">
+                                Materiais de Construção - loja virtual rápida, responsiva e com foco na experiência do
+                                usuário.
+                            </p>
+                            <a href="https://diegofranciscodasilva.github.io/materiais_construcao-site/" target="_blank"
+                                rel="noopener" class="project-card__link">Link projeto &rarr;</a>
+                            <a href="#contato" class="project-card__link">Solicitar projeto semelhante &rarr;</a>
                         </div>
                     </article>
 
                     <article class="card project-card">
                         <div class="project-card__thumb project-card__thumb--placeholder">
-                            <i class="fa-solid fa-cart-shopping"></i>
+                            <img src="./assets/images/barber-king.png" alt="Imagem do projeto Barber King"
+                                class="project-card__image">
                         </div>
                         <div class="project-card__body">
-                            <h4 class="project-card__title">E-commerce Moda</h4>
+                            <h4 class="project-card__title">Barber King</h4>
                             <p class="project-card__text">
-                                Loja virtual rápida, responsiva e com foco na experiência do usuário.
+                                Barbearia virtual rápida, responsiva e com foco na experiência do usuário.
                             </p>
-                            <a href="#" class="project-card__link">Ver projeto &rarr;</a>
+                            <a href="https://diegofranciscodasilva.github.io/barbearia-site/" target="_blank"
+                                rel="noopener" class="project-card__link">Link projeto &rarr;</a>
+                            <a href="#contato" class="project-card__link">Solicitar projeto semelhante &rarr;</a>
                         </div>
                     </article>
-                </div>
-
-                <h3 class="projects__subtitle projects__subtitle--margin">
-                    Projetos de Estudo e Experimentação
-                </h3>
-
-                <div class="grid grid--1col projects-grid">
                     <article class="card project-card">
                         <div class="project-card__thumb project-card__thumb--placeholder">
-                            <i class="fa-solid fa-flask"></i>
+                            <img src="./assets/images/the-grand-spot.png" alt="Imagem do projeto The Grand Spot"
+                                class="project-card__image">
                         </div>
                         <div class="project-card__body">
-                            <h4 class="project-card__title">App UI Concept</h4>
+                            <h4 class="project-card__title">The Grand Spot</h4>
                             <p class="project-card__text">
-                                Estudo de interface para gestão de tarefas, foco em usabilidade e organização.
+                                Lanchonete virtual rápida, responsiva e com foco na experiência do usuário.
                             </p>
-                            <a href="#" class="project-card__link">Ver detalhes &rarr;</a>
+                            <a href="https://diegofranciscodasilva.github.io/lanchonete-site/" target="_blank"
+                                rel="noopener" class="project-card__link">Link projeto &rarr;</a>
+                            <a href="#contato" class="project-card__link">Solicitar projeto semelhante &rarr;</a>
                         </div>
                     </article>
                 </div>
+
+
             </div>
         </div>
     </section>
@@ -345,12 +382,14 @@
     <section class="section section--alt" id="sobre">
         <div class="container about">
             <div class="about__visual card card--large">
-                <i class="fa-regular fa-user about__icon"></i>
+                <img src="./assets/images/dev-software-web.png" alt="Logo da Dev Software Web" class="about__image">
             </div>
             <div class="about__text">
                 <h2 class="section__title">Sobre a Marca</h2>
                 <p class="about__paragraph">
-                    A Dev Software Web foi idealizada por <strong>Diego Francisco da Silva</strong>, com o propósito
+                    A Dev Software Web foi idealizada por <strong><a
+                            href="https://diegofranciscodasilva.github.io/DiegoPortfolio/" target="_blank"
+                            rel="noopener" class="footer__copy">Diego Francisco da Silva</a></strong>, com o propósito
                     de democratizar o acesso à tecnologia e presença digital de qualidade para pequenos negócios.
                 </p>
                 <p class="about__paragraph">
@@ -491,7 +530,7 @@
 
             <div class="faq">
                 <div class="faq__item">
-                    <button class="faq__question">
+                    <button class="faq__question" type="button">
                         <span>Quanto tempo demora para criar um site?</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
@@ -505,7 +544,7 @@
                 </div>
 
                 <div class="faq__item">
-                    <button class="faq__question">
+                    <button class="faq__question" type="button">
                         <span>Vocês fornecem domínio e hospedagem?</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
@@ -518,7 +557,7 @@
                 </div>
 
                 <div class="faq__item">
-                    <button class="faq__question">
+                    <button class="faq__question" type="button">
                         <span>Como funciona o pagamento?</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
@@ -531,7 +570,7 @@
                 </div>
 
                 <div class="faq__item">
-                    <button class="faq__question">
+                    <button class="faq__question" type="button">
                         <span>Vocês produzem os textos do site?</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
@@ -544,7 +583,7 @@
                 </div>
 
                 <div class="faq__item">
-                    <button class="faq__question">
+                    <button class="faq__question" type="button">
                         <span>Terei suporte após a entrega?</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
@@ -557,7 +596,7 @@
                 </div>
 
                 <div class="faq__item">
-                    <button class="faq__question">
+                    <button class="faq__question" type="button">
                         <span>Atendem clientes de fora do Brasil?</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
@@ -583,13 +622,14 @@
                 como podemos ajudar.
             </p>
             <div class="section-cta__actions" id="contato">
-                <a href="#" class="btn btn--primary">
+                <a href="https://tally.so/r/eqG8kE" target="_blank" rel="noopener" class="btn btn--primary">
                     <i class="fa-regular fa-clipboard"></i>
                     Preencher briefing
                 </a>
-                <a href="#" class="btn btn--ghost">
+                <a href="https://wa.me/5511915466889?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20servi%C3%A7os%20da%20Dev%20Software%20Web."
+                    target="_blank" rel="noopener" class="btn btn--ghost">
                     <i class="fa-regular fa-comments"></i>
-                    Falar pelo WhatsApp
+                    Falar Whatsapp
                 </a>
             </div>
         </div>
@@ -617,33 +657,49 @@
 
                 <div class="footer__column">
                     <h4 class="footer__title">Redes</h4>
-                    <a href="#" class="footer__link">
+                    <a href="https://www.instagram.com/dev.software.web/" target="_blank" rel="noopener noreferrer"
+                        class="footer__link">
                         <i class="fa-brands fa-instagram"></i> Instagram
                     </a>
-                    <a href="#" class="footer__link">
+                    <a href="https://github.com/diegofranciscodasilva" target="_blank" rel="noopener noreferrer"
+                        class="footer__link">
                         <i class="fa-brands fa-github"></i> GitHub
                     </a>
-                    <a href="#" class="footer__link">
+                    <a href="https://www.linkedin.com/in/diego-francisco-da-silva/" target="_blank"
+                        rel="noopener noreferrer" class="footer__link">
                         <i class="fa-brands fa-linkedin"></i> LinkedIn
                     </a>
                 </div>
 
                 <div class="footer__column">
                     <h4 class="footer__title">Contato</h4>
-                    <a href="mailto:contato@devsoftwareweb.com" class="footer__link">contato@devsoftwareweb.com</a>
-                    <a href="#" class="footer__link">Política de privacidade</a>
+                    <a href="https://wa.me/5511915466889?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20servi%C3%A7os%20da%20Dev%20Software%20Web."
+                        target="_blank" rel="noopener noreferrer" class="footer__link">
+                        <i class="fa-brands fa-whatsapp"></i> Falar pelo WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
 
         <div class="footer__bottom">
-            <p>© 2024 Dev Software Web. Todos os direitos reservados.</p>
+            <p>© <span id="footer-year"></span> <a href="https://www.instagram.com/dev.software.web/" target="_blank"
+                    rel="noopener" class="footer__copy">Dev Software
+                    Web.</a> Todos os direitos reservados.</p>
             <p class="footer__small">
-                Dev Software Web é uma marca de prestação de serviços digitais administrada por Diego Francisco da
-                Silva.
+                Dev Software Web - Serviços Digitais - <a href="https://diegofranciscodasilva.github.io/DiegoPortfolio/"
+                    target="_blank" rel="noopener" class="footer__copy">Diego.</a>
             </p>
         </div>
     </footer>
+
+    <a class="floating-action floating-action--whatsapp"
+        href="https://wa.me/5511915466889?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20servi%C3%A7os%20da%20Dev%20Software%20Web."
+        target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    <button class="floating-action floating-action--scrollup" id="scroll-up" type="button" aria-label="Voltar ao topo">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
     <script src="./assets/js/script.js"></script>
 </body>
