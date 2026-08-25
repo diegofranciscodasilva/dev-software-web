@@ -9,6 +9,23 @@ function atualizarAnoFooter() {
 
 atualizarAnoFooter()
 
+const animatedSections = document.querySelectorAll('.challenges__block, .faq__item, .commitment')
+
+if ('IntersectionObserver' in window) {
+    const animationObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return
+
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+        })
+    }, { threshold: 0.15 })
+
+    animatedSections.forEach((element) => animationObserver.observe(element))
+} else {
+    animatedSections.forEach((element) => element.classList.add('is-visible'))
+}
+
 const menuToggle = document.getElementById('menu-toggle')
 const nav = document.getElementById('nav')
 

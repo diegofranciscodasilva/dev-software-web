@@ -56,10 +56,7 @@ A landing page apresenta os seguintes serviços:
 - Layout responsivo;
 - Navegação por âncoras;
 - Menu para dispositivos móveis;
-- Modo escuro;
-- Modo claro;
-- Alternância de tema;
-- Persistência da preferência de tema;
+- Tema escuro;
 - Seção de serviços;
 - Seção de projetos;
 - Seção de processo;
@@ -68,8 +65,9 @@ A landing page apresenta os seguintes serviços:
 - FAQ interativo;
 - Botões de chamada para ação;
 - Links para redes sociais;
-- Integração preparada com WhatsApp;
-- Integração preparada com formulário Tally;
+- Botões flutuantes para WhatsApp e retorno ao topo;
+- Integração com WhatsApp;
+- Integração com formulário Tally;
 - Ícones da biblioteca Font Awesome;
 - Animações e transições suaves.
 
@@ -97,14 +95,13 @@ A landing page está organizada nas seguintes seções:
 ```text
 dev-software-web/
 ├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
 ├── assets/
+│   ├── archives/
+│   ├── css/
+│   │   └── style.css
 │   ├── images/
-│   ├── icons/
-│   └── favicon/
+│   └── js/
+│       └── script.js
 └── README.md
 ```
 
@@ -129,15 +126,14 @@ A interface utiliza uma estética tecnológica, moderna e profissional.
 
 ### Cores principais
 
-- `#121212` — Fundo principal;
-- `#1E1E1E` — Fundo secundário;
-- `#2D2D2D` — Bordas e divisores;
-- `#E0E0E0` — Texto principal;
-- `#A0A0A0` — Texto secundário;
-- `#00BFFF` — Cor de destaque;
-- `#009ACD` — Cor de destaque no estado hover;
-- `#28A745` — Indicadores de sucesso;
-- `#DC3545` — Indicadores de erro.
+- `#0B0B0F` — Fundo principal;
+- `#020617` — Fundo elevado e seções de destaque;
+- `#111827` — Fundo dos cards;
+- `#E5E7EB` — Texto principal;
+- `#9CA3AF` — Texto secundário;
+- `#38BDF8` — Cor de destaque e hover;
+- `#22C55E` — Indicadores de sucesso;
+- `#DC2626` — Indicadores de erro.
 
 ## Responsividade
 
@@ -179,10 +175,8 @@ Possíveis melhorias para versões futuras:
 - Adicionar imagens reais dos projetos;
 - Criar páginas individuais para cada projeto;
 - Integrar o formulário Tally diretamente;
-- Integrar o botão de WhatsApp;
 - Adicionar domínio personalizado;
 - Melhorar SEO;
-- Adicionar favicon personalizado;
 - Criar página de política de privacidade;
 - Adicionar formulário de contato próprio;
 - Integrar Google Analytics;
