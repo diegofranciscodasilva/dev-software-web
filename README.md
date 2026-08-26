@@ -1,8 +1,10 @@
 # Dev Software Web
 
-Landing page profissional da **Dev Software Web**, uma marca de serviços digitais administrada por Diego Francisco da Silva.
+![Preview do Portfólio](assets/images/dev-software-web-site.png)
 
-O projeto apresenta serviços de desenvolvimento Front-End, criação de sites, landing pages, reformulação de redes sociais e produção de conteúdos digitais para pequenos negócios, profissionais autônomos e empresas.
+Landing page profissional da **Dev Software Web**, uma marca de serviços digitais e assessoria acadêmica administrada por Diego Francisco da Silva.
+
+O projeto apresenta serviços de desenvolvimento Front-End, criação de sites, landing pages, reformulação de redes sociais e produção de conteúdos digitais para pequenos negócios, profissionais autônomos e empresas. Também divulga serviços de assessoria acadêmica para estudantes do ensino fundamental, ensino médio, cursos técnicos, graduação e pós-graduação.
 
 ## Demonstração
 
@@ -20,6 +22,7 @@ Criar uma landing page comercial para:
 
 - Apresentar a marca Dev Software Web;
 - Divulgar serviços digitais;
+- Divulgar serviços de assessoria acadêmica;
 - Mostrar projetos demonstrativos;
 - Explicar o processo de atendimento;
 - Apresentar pacotes de serviços;
@@ -40,6 +43,21 @@ A landing page apresenta os seguintes serviços:
 - Criação de banners e materiais digitais;
 - Organização da presença digital;
 - Manutenção e atualização de projetos.
+
+### Assessoria acadêmica
+
+- Trabalhos escolares e acadêmicos;
+- Trabalhos de faculdade;
+- Resumos e fichamentos;
+- Pesquisas e revisões bibliográficas;
+- Apresentações de slides;
+- Projetos acadêmicos;
+- Artigos científicos e TCCs;
+- Estruturação, revisão e formatação conforme normas ABNT;
+- Roteiros para apresentação oral;
+- Correção de textos e melhoria da escrita.
+
+O atendimento é divulgado como assessoria, orientação, pesquisa assistida, revisão e formatação. O trabalho respeita a autoria do estudante e as regras da instituição de ensino, sem oferecer produção clandestina de trabalhos prontos para entrega.
 
 ## Tecnologias utilizadas
 
@@ -96,8 +114,7 @@ A landing page está organizada nas seguintes seções:
 dev-software-web/
 ├── index.html
 ├── assets/
-│   ├── archives/
-│   ├── css/
+│   │   ├── css/
 │   │   └── style.css
 │   ├── images/
 │   └── js/
@@ -202,7 +219,7 @@ Alterações, novas páginas, correções fora do escopo original e manutenção
 
 ## Autor
 
-**Diego Francisco da Silva**
+### Diego Francisco da Silva
 
 Estudante de Engenharia de Software e desenvolvedor Front-End freelancer.
 
