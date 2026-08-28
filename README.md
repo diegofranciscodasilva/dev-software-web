@@ -27,7 +27,7 @@ Criar uma landing page comercial para:
 - Explicar o processo de atendimento;
 - Apresentar pacotes de serviços;
 - Gerar contatos e pedidos de orçamento;
-- Direcionar visitantes para o WhatsApp, Instagram e formulário de briefing.
+- Direcionar visitantes para o WhatsApp, Instagram, LinkedIn e portfólio.
 
 ## Serviços apresentados
 
@@ -41,8 +41,7 @@ A landing page apresenta os seguintes serviços:
 - Criação de carrosséis;
 - Criação de Reels;
 - Criação de banners e materiais digitais;
-- Organização da presença digital;
-- Manutenção e atualização de projetos.
+- Assessoria acadêmica, revisão e formatação ABNT.
 
 ### Assessoria acadêmica
 
@@ -85,7 +84,7 @@ O atendimento é divulgado como assessoria, orientação, pesquisa assistida, re
 - Links para redes sociais;
 - Botões flutuantes para WhatsApp e retorno ao topo;
 - Integração com WhatsApp;
-- Integração com formulário Tally;
+- Links de contato para WhatsApp e redes sociais;
 - Ícones da biblioteca Font Awesome;
 - Animações e transições suaves.
 
@@ -114,7 +113,7 @@ A landing page está organizada nas seguintes seções:
 dev-software-web/
 ├── index.html
 ├── assets/
-│   │   ├── css/
+│   ├── css/
 │   │   └── style.css
 │   ├── images/
 │   └── js/
@@ -189,9 +188,7 @@ O projeto utiliza práticas básicas de acessibilidade, como:
 
 Possíveis melhorias para versões futuras:
 
-- Adicionar imagens reais dos projetos;
 - Criar páginas individuais para cada projeto;
-- Integrar o formulário Tally diretamente;
 - Adicionar domínio personalizado;
 - Melhorar SEO;
 - Criar página de política de privacidade;

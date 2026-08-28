@@ -49,6 +49,15 @@ if (menuToggle && nav) {
 // ===== FAQ (ACORDEÃO) =====
 const faqItems = document.querySelectorAll('.faq__item')
 
+function atualizarAlturaResposta(item) {
+    const answer = item.querySelector('.faq__answer')
+
+    if (answer && item.classList.contains('active')) {
+        answer.style.maxHeight = 'none'
+        answer.style.maxHeight = answer.scrollHeight + 'px'
+    }
+}
+
 faqItems.forEach((item) => {
     const question = item.querySelector('.faq__question')
     const answer = item.querySelector('.faq__answer')
@@ -56,6 +65,7 @@ faqItems.forEach((item) => {
     if (!question || !answer) return
 
     question.setAttribute('aria-expanded', 'false')
+    answer.setAttribute('aria-hidden', 'true')
 
     question.addEventListener('click', () => {
         const isOpen = item.classList.contains('active');
@@ -66,27 +76,35 @@ faqItems.forEach((item) => {
             const button = i.querySelector('.faq__question')
             if (button) button.setAttribute('aria-expanded', 'false')
             const ans = i.querySelector('.faq__answer')
-            if (ans) ans.style.maxHeight = null
+            if (ans) {
+                ans.style.maxHeight = null
+                ans.setAttribute('aria-hidden', 'true')
+            }
         })
 
         // Abre o clicado se estava fechado
         if (!isOpen) {
             item.classList.add('active')
             question.setAttribute('aria-expanded', 'true')
-            answer.style.maxHeight = answer.scrollHeight + 'px'
+            answer.setAttribute('aria-hidden', 'false')
+            atualizarAlturaResposta(item)
         }
     })
 })
 
 // Expande a primeira FAQ por padrão (opcional)
 if (faqItems[0]) {
-    const firstAnswer = faqItems[0].querySelector('.faq__answer')
     faqItems[0].classList.add('active')
     faqItems[0].querySelector('.faq__question')?.setAttribute('aria-expanded', 'true')
-    if (firstAnswer) {
-        firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px'
-    }
+    faqItems[0].querySelector('.faq__answer')?.setAttribute('aria-hidden', 'false')
+    atualizarAlturaResposta(faqItems[0])
 }
+
+window.addEventListener('resize', () => {
+    window.requestAnimationFrame(() => {
+        faqItems.forEach(atualizarAlturaResposta)
+    })
+})
 
 // ===== BOTAO VOLTAR AO TOPO =====
 const scrollUp = document.getElementById('scroll-up')
