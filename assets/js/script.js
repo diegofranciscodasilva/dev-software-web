@@ -30,6 +30,31 @@ const menuToggle = document.getElementById('menu-toggle')
 const nav = document.getElementById('nav')
 
 if (menuToggle && nav) {
+    const navLinks = [...nav.querySelectorAll('a.nav__link')]
+    const footer = document.querySelector('.footer')
+    const navSections = navLinks
+        .map((link) => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean)
+
+    function atualizarLinkAtivo() {
+        if (footer && footer.getBoundingClientRect().top <= window.innerHeight) {
+            navLinks.forEach((link) => link.classList.remove('active'))
+            return
+        }
+
+        const headerHeight = document.querySelector('.header')?.offsetHeight || 0
+        const currentPosition = window.scrollY + headerHeight + 24
+        let activeSection = navSections[0]
+
+        navSections.forEach((section) => {
+            if (section.offsetTop <= currentPosition) activeSection = section
+        })
+
+        navLinks.forEach((link) => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + activeSection.id)
+        })
+    }
+
     menuToggle.addEventListener('click', () => {
         const isOpen = nav.classList.toggle('open')
         menuToggle.setAttribute('aria-expanded', String(isOpen))
@@ -39,11 +64,16 @@ if (menuToggle && nav) {
     // Fecha o menu ao clicar em um link
     nav.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => {
+            if (link.classList.contains('nav__link')) atualizarLinkAtivo()
             nav.classList.remove('open')
             menuToggle.setAttribute('aria-expanded', 'false')
             menuToggle.setAttribute('aria-label', 'Abrir menu')
         })
     })
+
+    window.addEventListener('scroll', atualizarLinkAtivo, { passive: true })
+    window.addEventListener('resize', atualizarLinkAtivo)
+    atualizarLinkAtivo()
 }
 
 // ===== FAQ (ACORDEÃO) =====

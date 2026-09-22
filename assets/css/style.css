@@ -57,7 +57,6 @@ body {
 }
 
 /* ===== ELEMENTOS BASE ===== */
-
 img {
     max-width: 100%;
     display: block;
@@ -81,7 +80,6 @@ button {
 }
 
 /* ===== LAYOUT ===== */
-
 .container {
     width: 100%;
     max-width: 1120px;
@@ -115,7 +113,6 @@ button {
 }
 
 /* ===== GRID ===== */
-
 .grid {
     display: grid;
     gap: 1.5rem;
@@ -138,7 +135,6 @@ button {
 }
 
 /* ===== CARDS E BOTÕES ===== */
-
 .card {
     background-color: var(--bg-card);
     border-radius: var(--radius-md);
@@ -227,7 +223,6 @@ button {
 }
 
 /* ===== HEADER ===== */
-
 .header {
     position: fixed;
     top: 0;
@@ -248,6 +243,7 @@ button {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    position: relative;
 }
 
 .header__brand {
@@ -277,6 +273,8 @@ button {
 
 .nav {
     flex: 1;
+    position: relative;
+    padding-right: 15rem;
 }
 
 .nav__list {
@@ -305,18 +303,24 @@ button {
     transition: width 0.22s ease;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link.active {
     color: var(--text-primary);
 }
 
-.nav__link:hover::after {
+.nav__link:hover::after,
+.nav__link.active::after {
     width: 100%;
 }
 
-.header__actions {
+.nav__actions {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
 }
 
 .header__btn-portfolio {
@@ -332,7 +336,6 @@ button {
 }
 
 /* ===== HERO ===== */
-
 .hero {
     padding: 4.5rem 0 4rem;
     background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 55%),
@@ -419,7 +422,6 @@ button {
 }
 
 /* bloco visual hero */
-
 .hero__visual {
     display: flex;
     justify-content: flex-end;
@@ -564,7 +566,6 @@ button {
 }
 
 /* ===== SERVIÇOS ===== */
-
 .services-grid {
     margin-top: 1rem;
 }
@@ -610,7 +611,6 @@ button {
 }
 
 /* ===== DESAFIOS / SOLUÇÃO ===== */
-
 .challenges {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -683,7 +683,6 @@ button {
 }
 
 /* ===== PROCESSO ===== */
-
 .process-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -737,7 +736,6 @@ button {
 }
 
 /* ===== PROJETOS ===== */
-
 .projects__subtitle {
     font-size: 1.1rem;
     margin-bottom: 1.3rem;
@@ -805,7 +803,6 @@ button {
 }
 
 /* ===== SOBRE ===== */
-
 .about {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
@@ -835,7 +832,6 @@ button {
 }
 
 /* ===== DIFERENCIAIS ===== */
-
 .benefits-grid {
     margin-top: 1.5rem;
 }
@@ -879,7 +875,6 @@ button {
 }
 
 /* ===== PACOTES ===== */
-
 .plans-grid {
     margin-top: 1.2rem;
 }
@@ -946,7 +941,6 @@ button {
 }
 
 /* ===== COMPROMISSO ===== */
-
 .commitment {
     text-align: center;
     position: relative;
@@ -989,7 +983,6 @@ button {
 }
 
 /* ===== FAQ ===== */
-
 .faq {
     max-width: 720px;
     margin: 0 auto;
@@ -1111,7 +1104,6 @@ button {
 }
 
 /* ===== CTA FINAL ===== */
-
 .section-cta {
     background: linear-gradient(135deg, var(--bg-card-alt), var(--bg-elevated-alt));
     border-top: 1px solid rgba(148, 163, 184, 0.25);
@@ -1138,7 +1130,6 @@ button {
 }
 
 /* ===== FOOTER ===== */
-
 .footer {
     background: linear-gradient(180deg, #020617 0%, #050b18 100%);
     border-top: 1px solid rgba(56, 189, 248, 0.22);
@@ -1228,7 +1219,6 @@ button {
 }
 
 /* ===== ACOES FLUTUANTES ===== */
-
 .floating-action {
     position: fixed;
     bottom: 1.5rem;
@@ -1313,8 +1303,11 @@ button {
 }
 
 /* ===== RESPONSIVIDADE ===== */
-
 @media (max-width: 1024px) {
+    .header__btn-portfolio {
+        display: none;
+    }
+
     .grid--3cols {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1352,6 +1345,7 @@ button {
     .nav {
         position: absolute;
         inset: var(--header-height) 0 auto;
+        padding-right: 0;
         z-index: 1;
         background-color: var(--bg-elevated);
         border-bottom: 1px solid var(--border-subtle);
@@ -1379,8 +1373,22 @@ button {
         gap: 0.4rem;
     }
 
-    .header__btn-portfolio {
-        display: none;
+    .nav__actions {
+        position: static;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        padding: 0 1.5rem 1.4rem;
+        transform: none;
+    }
+
+    .nav__actions .btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav__actions .header__btn-portfolio {
+        display: inline-flex;
     }
 
     .header__menu-toggle {
@@ -1471,10 +1479,6 @@ button {
         gap: 0.35rem;
     }
 
-    .header__btn-cta {
-        display: none;
-    }
-
     .process-grid {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -1522,5 +1526,4 @@ button {
     .floating-action--scrollup {
         right: 1rem;
     }
-
 }
