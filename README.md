@@ -10,7 +10,7 @@ O projeto apresenta serviços de desenvolvimento Front-End, criação de sites, 
 
 Acesse o projeto publicado:
 
-[Dev Software Web — Landing Page](https://diegofranciscodasilva.github.io/dev-software-web/)
+[Dev Software Web — Landing Page](https://www.devsoftwareweb.com.br/)
 
 ## Portfólio do desenvolvedor
 

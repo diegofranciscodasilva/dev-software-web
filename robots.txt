@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://diegofranciscodasilva.github.io/dev-software-web/sitemap.xml
+Sitemap: https://www.devsoftwareweb.com.br/sitemap.xml
